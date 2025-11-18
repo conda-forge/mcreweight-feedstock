@@ -1,5 +1,5 @@
 {% set name = "mcreweight" %}
-{% set version = "0.2.5" %}
+{% set version = "0.2.8" %}
 {% set python_min = "3.8" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mcreweight-{{ version }}.tar.gz
-  sha256: 4471ac0aacd7d68c2a3203153344e16443df07abd2d5cf3643d02a965bc45f4c
+  sha256: a8927da82a09a2e20a23e3ee258f4892e77d08a7815a5c920bfbcccbffec9cef
 
 build:
   entry_points:
@@ -36,6 +36,7 @@ requirements:
     - awkward-pandas >=2023.8.0
     - numexpr >=2.7.0
     - uproot >=5.0.0
+    - awkward >=2.6.0
 
 test:
   imports:
