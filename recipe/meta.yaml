@@ -1,5 +1,5 @@
 {% set name = "mcreweight" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 {% set python_min = "3.8" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mcreweight-{{ version }}.tar.gz
-  sha256: 409042f2ddbbd292ffd85f5f88b7c90c0db36a07e144d04820de121ad7ec89ea
+  sha256: 38fc0f07eb6080e63243c68ee0da6e66b16b97453fc01ed770b5e5dbec707778
 
 build:
   entry_points:
