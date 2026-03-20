@@ -1,5 +1,5 @@
 context:
-  version: 0.3.2
+  version: 0.3.4
 
 package:
   name: mcreweight
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/m/mcreweight/mcreweight-${{ version }}.tar.gz
-    sha256: 0b0bea50a9b31346ff6751a992369797419c188db1153c7d5dd5a534078b2983
+    sha256: 0b9b1c6e0680f49f81482607708897b37aafc2733ce16679563d4830901f7260
 
 build:
   number: 0
