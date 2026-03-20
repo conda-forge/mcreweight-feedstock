@@ -1,0 +1,58 @@
+context:
+  version: 0.3.4
+
+package:
+  name: mcreweight
+  version: ${{ version }}
+
+source:
+  - url: https://pypi.org/packages/source/m/mcreweight/mcreweight-${{ version }}.tar.gz
+    sha256: 0b9b1c6e0680f49f81482607708897b37aafc2733ce16679563d4830901f7260
+
+build:
+  number: 0
+  script: ${{ PYTHON }} -m pip install .
+  python:
+    entry_points:
+    - apply-weights = scripts.apply_weights:main
+    - run-reweight = scripts.run_reweighting:main
+  noarch: python
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - hatch-vcs
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - numpy >=1.20.0
+    - pandas >=1.3.0
+    - matplotlib-base >=3.4.0
+    - scikit-learn >=1.0.0
+    - optuna >=2.10.0
+    - hep_ml >=0.8.0
+    - seaborn >=0.11.0
+    - awkward-pandas >=2023.8.0
+    - numexpr >=2.7.0
+    - uproot !=5.6.8,>=5.0.0
+    - awkward >=2.6.0
+
+tests:
+- python:
+    python_version:
+      - ${{ python_min }}.*
+      - "*"
+    imports:
+    - mcreweight
+    pip_check: true
+
+about:
+  summary: Tools for reweighting Monte Carlo samples to match experimental data distributions
+  license: GPL-3.0-only
+  license_file: LICENSE
+  homepage: https://github.com/tfulghes/mcreweight
+
+extra:
+  recipe-maintainers:
+    - tfulghes7
