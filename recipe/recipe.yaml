@@ -14,8 +14,8 @@ build:
   script: ${{ PYTHON }} -m pip install .
   python:
     entry_points:
-    - apply-weights = scripts.apply_weights:main
-    - run-reweight = scripts.run_reweighting:main
+    - apply-weights = mcreweight.scripts.apply_weights:main
+    - run-reweight = mcreweight.scripts.run_reweighting:main
   noarch: python
 
 requirements:
