@@ -1,5 +1,5 @@
 context:
-  version: 0.3.4
+  version: "1.0.3"
 
 package:
   name: mcreweight
@@ -7,15 +7,15 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/m/mcreweight/mcreweight-${{ version }}.tar.gz
-    sha256: 0b9b1c6e0680f49f81482607708897b37aafc2733ce16679563d4830901f7260
+    sha256: 9c128685be0952c226c5250964dbfb1a7e4bc7b3528c7d1fd01df5793ede1250
 
 build:
-  number: 1
+  number: 0
   script: ${{ PYTHON }} -m pip install .
   python:
     entry_points:
-    - apply-weights = mcreweight.scripts.apply_weights:main
-    - run-reweight = mcreweight.scripts.run_reweighting:main
+      - apply-weights = mcreweight.scripts.apply_weights:main
+      - run-reweight = mcreweight.scripts.run_reweighting:main
   noarch: python
 
 requirements:
@@ -39,13 +39,13 @@ requirements:
     - awkward >=2.6.0
 
 tests:
-- python:
-    python_version:
-      - ${{ python_min }}.*
-      - "*"
-    imports:
-    - mcreweight
-    pip_check: true
+  - python:
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+      imports:
+        - mcreweight
+      pip_check: true
 
 about:
   summary: Tools for reweighting Monte Carlo samples to match experimental data distributions
