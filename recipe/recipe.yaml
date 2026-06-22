@@ -66,3 +66,5 @@ about:
 extra:
   recipe-maintainers:
     - tfulghes7
+
+# No functional recipe changes; metadata-only touch commit.
