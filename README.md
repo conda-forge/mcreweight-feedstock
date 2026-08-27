@@ -40,31 +40,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `mcreweight` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install mcreweight
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install mcreweight
 ```
 
-It is possible to list all of the versions of `mcreweight` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add mcreweight
+# for installing globally
+pixi global install mcreweight
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `mcreweight` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search mcreweight --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search mcreweight --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search mcreweight --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -76,6 +118,8 @@ mamba repoquery whoneeds mcreweight --channel conda-forge
 # List dependencies of `mcreweight`:
 mamba repoquery depends mcreweight --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
